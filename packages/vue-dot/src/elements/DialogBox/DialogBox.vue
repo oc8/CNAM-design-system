@@ -8,12 +8,12 @@
 		class="vd-dialog-box"
 	>
 		<VCard v-bind="options.card">
-			<VCardTitle v-bind="options.cardTitle">
+			<VCardTitle
+				v-if="title"
+				v-bind="options.cardTitle"
+			>
 				<slot name="title">
-					<h2
-						v-if="title"
-						class="text-h6 font-weight-bold"
-					>
+					<h2 class="text-h6 font-weight-bold">
 						{{ title }}
 					</h2>
 				</slot>
